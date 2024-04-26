@@ -1,0 +1,193 @@
+body{
+    background-color: black;
+    
+}
+
+
+.navigation{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10%;
+
+}
+.link{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    cursor: pointer;
+    margin-right: 60px;
+    margin-left: 60px;
+} 
+.link:hover {
+    color: lightslategray;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out; 
+}
+
+.heros{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 150px;
+}
+
+
+.herotitle{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+}
+
+.herosubtitle{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+}
+
+
+.heroImage {
+    margin-top: 70px;
+    height: 400px;
+    width: 400px;
+    background-blend-mode: multiply;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+
+button {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+   
+   button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+
+
+
+.cuisine{
+    color: white;
+    text-align: center;
+    text-decoration: wavy;
+    margin-top: 100px;
+    
+    cursor: pointer;
+}
+
+.foods{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap:20px;
+    margin: auto;
+
+}
+
+   .card {
+    margin-top: 100px;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin-right: 40px; /* Add this line to add a right margin to each card */
+    margin-bottom: 4
+    0px;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+  }
+  
+  .card-back {
+    background-color: #6A2C70;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #6A2C70;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+  }
+
+  .cardimages{
+    height: 200px;
+    width: 300px;
+    border-radius: 5%;
+}
+ 
+  
