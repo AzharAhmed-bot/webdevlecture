@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     const body=document.querySelector(".body");
 
     randomColorButton.addEventListener("click",()=>{
-        body.style.color=randomColor()
+        body.style.backgroundColor=randomColor()
     })
 
 })
