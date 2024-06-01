@@ -67,7 +67,7 @@ var randomColor=()=>{
 }
 
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener('DOMContentLoaded',()=>{
     const redElements=document.querySelectorAll(".red")
     redElements.forEach((element)=>{
         element.style.color="red";
@@ -80,8 +80,10 @@ document.addEventListener("DOMContentLoaded",()=>{
         const newLi=document.createElement("li")
         newLi.innerHTML=newTodo
         todoUL.appendChild(newLi);
+        
     })
 
+    todoInput.innerContent=""
     const randomColorButton=document.querySelector(".random-color");
     const body=document.querySelector(".body");
 
