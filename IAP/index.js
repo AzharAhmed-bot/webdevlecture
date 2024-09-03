@@ -12,9 +12,21 @@ document.addEventListener('DOMContentLoaded',()=>{
         todo.append(newList);
     });
 
-    const interval=setInterval(1000);
-    const name=prompt("What is your name?");
-    console.log("Hello" +name);
+    function Car(brand,DoM){
+        this.brand=brand;
+        this.DoM=DoM;
+      
+    }
+    
+    Car.prototype.age=function(){
+        return 2024-this.DoM;
+    }
+    let car1=new Car("Toyota",2012);
+    console.log(Car.prototype);
+    console.log(car1.age());
+
+    
+
 })
 
 // Vanilla Javascript;
