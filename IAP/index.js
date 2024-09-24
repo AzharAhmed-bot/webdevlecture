@@ -25,7 +25,18 @@ document.addEventListener('DOMContentLoaded',()=>{
     console.log(Car.prototype);
     console.log(car1.age());
 
-    
+    const eatButton=document.querySelector("#eat");
+    eatButton.addEventListener('click',()=>{
+        const food=document.querySelector("#foodGroup").value;
+        
+        alert(`You are eating ${food}`)  
+
+        const foodImage=document.querySelector(`.${food}`)
+        if(foodImage){
+            foodImage.style.display='none';
+        }
+    })
+
 
 })
 

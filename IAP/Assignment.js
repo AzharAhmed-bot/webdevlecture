@@ -53,3 +53,7 @@ for(let classItem in classes){
     console.log(`Name \t\t Points`);
     console.log(`${classes[classItem].name} \t\t ${classes[classItem].points}`);
 }
+
+for(let item in classes){
+    console.log(classes[item].name)
+}
