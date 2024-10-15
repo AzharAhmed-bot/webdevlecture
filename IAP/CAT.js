@@ -3,7 +3,7 @@
         bakingPowder:200,
         salt:50
     }
-
+console.log(Object.isFrozen(ingredientPrice))
 Object.freeze(ingredientPrice);
 
 
@@ -22,7 +22,8 @@ let chocolate_recipe = {
       "Bake for 30-35 minutes"
     ]
   };
-  
+
+
 
 const ingredients=chocolate_recipe.ingredients;
 // console.log(ingredients)
@@ -84,3 +85,23 @@ recipes.push(newRecipe);
 
 const recipeNames=recipes.map(recipe=>recipe.name)
 console.log(recipeNames);
+
+const enterCategory ="appetizer"
+
+const filteredRecipes=recipes.filter(recipe=>recipe.category===enterCategory)
+console.log(filteredRecipes)
+
+const player = {
+    name: "Lionnel Messi",
+    age:36,
+    position: "Forward",
+    team: "Inter Miami",
+    goals: 700,
+    assists: 300,
+    stats: function() {
+        return `${this.name} has scored ${this.goals} goals and provided ${this.assists} assists.`;
+    }
+}
+
+console.log(player.stats());
+
