@@ -1,0 +1,164 @@
+/* styles.css */
+
+/* Reset some basic elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+/* Container for recipes */
+.recipes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual recipe card */
+.recipe {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recipe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Recipe image */
+.recipe img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Recipe content */
+.recipe h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 15px;
+}
+
+.recipe p {
+    color: #555;
+    margin: 0 15px 15px 15px;
+    line-height: 1.5;
+}
+
+/* Created at date */
+.recipe .created-at {
+    font-size: 0.9em;
+    color: #999;
+    margin: 0 15px 15px 15px;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .recipes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe {
+        width: 90%;
+    }
+}
+
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.add-recipe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    width: 100%;
+    max-width: 400px;
+    
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #5cb85c;
+    outline: none;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
