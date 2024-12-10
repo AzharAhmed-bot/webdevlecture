@@ -1,0 +1,11 @@
+{
+    "smarties": "rainbow",
+    "candyCorn": ["orange", "#FFFFFF"],
+    "skittles": [{
+     "rainbow": true,
+     "colors": 154
+      }],
+    "rainbow": ["smarties", "sprinkles"]
+
+}
+    

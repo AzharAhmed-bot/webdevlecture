@@ -36,7 +36,6 @@ const arraySum = function(numbers) {
         sum.push(total);
     })
     return sum;
-
 }
 
 

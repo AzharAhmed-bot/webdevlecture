@@ -43,5 +43,80 @@ button.addEventListener("click",()=>{
 })
 
 
+document.addEventListener('DOMContentLoaded',()=>{
+    const radioButtons=document.querySelectorAll("#radioButtons")
+    for(let i=0;i<=radioButtons.length;i++){
+        radioButtons[i].addEventListener('change',()=>{
+            const animalType=radioButtons[i].value;
+            fetchUsingAjax(animalType);
+        })
+    }
 
+    function fetchUsingAjax(animalType){
+        const xhttp=new XMLHttpRequest();
+        xhttp.open("GET",`https://webtest.com/pets/ajaxpets.php?animal=${animalType}`,true)
+        xhttp.onload=()=>{
+            if(xhttp.status==200 && xhttp.readyState==4){
+                const data=JSON.parse(xhttp.responseText);
+                console.log(data);
+            }
+        }
+        xhttp.send()
+    }
+    const books = [
+        {
+        title: "A Design Patterns: Elements of Reusable Object-Oriented Software",
+        img: "img/media/design_patterns.jpg",
+        genre: "Tech",
+        format: "Paperback",
+        year: 1994,
+        category: "Books",
+        authors: [
+        "Erich Gamma",
+        "Richard Helm",
+        "Ralph Johnson",
+        "John Vlissides"
+        ],
+        publisher: "Prentice Hall",
+        isbn: "978-0201633610"
+        },
+        {
+        title: "Clean Code: A Handbook of Agile Software Craftsmanship",
+        img: "img/media/clean_code.jpg",
+        genre: "Tech",
+        format: "Ebook",
+        year: 2008,
+        category: "Books",
+        authors: [
+        "Robert C. Martin"
+        ],
+        publisher: "Prentice Hall",
+        isbn: "978-0132350884"
+        }
+        ]
+
+    books.map(book=>{
+        const div=document.createElement('div');
+        const img=document.createElement('img');
+        img.src=book.img;
+        const title=document.createElement('h2');
+        title.textContent=book.title;
+        const genre=document.createElement('p');
+        genre.textContent=book.genre;
+        const format=document.createElement('p');
+        format.textContent=book.format;
+        const year=document.createElement('p');
+        year.textContent=book.year;
+        const category=document.createElement('p');
+        category.textContent=book.category;
+        const authors=document.createElement('p');
+        authors.textContent=book.authors.map((author)=>author).join(', ')
+        const publisher=document.createElement('p');
+        publisher.textContent=book.publisher;
+        const isbn=document.createElement('p');
+        isbn.textContent=book.isbn;
+        div.append(img,title,genre,format,year,category,authors,publisher,isbn);
+        document.body.append(div)
+    })
+})
 
