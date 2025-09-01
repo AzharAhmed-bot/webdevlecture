@@ -5,6 +5,7 @@
     }
 console.log(Object.isFrozen(ingredientPrice))
 Object.freeze(ingredientPrice);
+// Object cant be modified
 
 
 let chocolate_recipe = {
